@@ -119,8 +119,8 @@ function parseStringOrBytes32(str: string | undefined, bytes32: string | undefin
     ? str
     : // need to check for proper bytes string and valid terminator
     bytes32 && BYTES32_REGEX.test(bytes32) && arrayify(bytes32)[31] === 0
-    ? parseBytes32String(bytes32)
-    : defaultValue
+      ? parseBytes32String(bytes32)
+      : defaultValue
 }
 
 // undefined if invalid or does not exist
@@ -187,7 +187,7 @@ export function useCurrency(currencyId: string | null | undefined): Currency | n
       chainId
         ? ExtendedEther.onChain(chainId)
         : // display mainnet when not connected
-          ExtendedEther.onChain(SupportedChainId.MAINNET),
+        ExtendedEther.onChain(SupportedChainId.MAINNET),
     [chainId]
   )
   const weth = chainId ? WETH9_EXTENDED[chainId] : undefined

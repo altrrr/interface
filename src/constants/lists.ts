@@ -4,6 +4,7 @@ const CMC_ALL_LIST = 'https://api.coinmarketcap.com/data-api/v3/uniswap/all.json
 const COINGECKO_LIST = 'https://tokens.coingecko.com/uniswap/all.json'
 const COMPOUND_LIST = 'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json'
 const GEMINI_LIST = 'https://www.gemini.com/uniswap/manifest.json'
+export const SEED_LIST = 'https://gist.githubusercontent.com/remaintion/f7ce1a44b6f6d2e0e7c182e99a22393e/raw/56336a987e13bc5c8fb2f1eb2ed42ecd23d0c672/gistfile1.json'
 export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
 const KLEROS_LIST = 't2crtokens.eth'
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
@@ -35,4 +36,4 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
 ]
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [GEMINI_LIST]
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [SEED_LIST]

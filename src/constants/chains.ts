@@ -1,5 +1,6 @@
 import ethereumLogoUrl from 'assets/images/ethereum-logo.png'
 import arbitrumLogoUrl from 'assets/svg/arbitrum_logo.svg'
+import bnbLogoUrl from 'assets/svg/bnb_logo.svg'
 import optimismLogoUrl from 'assets/svg/optimistic_ethereum.svg'
 import ms from 'ms.macro'
 
@@ -9,6 +10,8 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
+  BSC = 56,
+  BSCTESTNET = 97,
 
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
@@ -22,6 +25,8 @@ export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
+  SupportedChainId.BSC,
+  SupportedChainId.BSCTESTNET,
 
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.ARBITRUM_RINKEBY,
@@ -97,12 +102,28 @@ export const CHAIN_INFO: ChainInfo = {
     rpcUrls: ['https://rinkeby.arbitrum.io/rpc'],
   },
   [SupportedChainId.MAINNET]: {
-    docs: 'https://docs.uniswap.org/',
-    explorer: 'https://etherscan.io/',
-    infoLink: 'https://info.uniswap.org/#/',
+    docs: 'https://bscscan.com',
+    explorer: 'https://bscscan.com',
+    infoLink: 'https://bscscan.com',
     label: 'Ethereum',
     logoUrl: ethereumLogoUrl,
-    nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+  },
+  [SupportedChainId.BSC]: {
+    docs: 'https://bscscan.com',
+    explorer: 'https://bscscan.com',
+    infoLink: 'https://bscscan.com',
+    label: 'BSC',
+    logoUrl: bnbLogoUrl,
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+  },
+  [SupportedChainId.BSCTESTNET]: {
+    docs: 'https://testnet.bscscan.com',
+    explorer: 'https://testnet.bscscan.com',
+    infoLink: 'https://testnet.bscscan.com',
+    label: 'BSCTESTNET',
+    logoUrl: bnbLogoUrl,
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
   },
   [SupportedChainId.RINKEBY]: {
     docs: 'https://docs.uniswap.org/',

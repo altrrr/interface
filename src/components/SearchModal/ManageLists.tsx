@@ -75,12 +75,12 @@ const StyledTitleText = styled.div<{ active: boolean }>`
   color: ${({ theme, active }) => (active ? theme.white : theme.text2)};
 `
 
-const StyledListUrlText = styled(TYPE.main)<{ active: boolean }>`
+const StyledListUrlText = styled(TYPE.main) <{ active: boolean }>`
   font-size: 12px;
   color: ${({ theme, active }) => (active ? theme.white : theme.text2)};
 `
 
-const RowWrapper = styled(Row)<{ bgColor: string; active: boolean; hasActiveTokens: boolean }>`
+const RowWrapper = styled(Row) <{ bgColor: string; active: boolean; hasActiveTokens: boolean }>`
   background-color: ${({ bgColor, active, theme }) => (active ? bgColor ?? 'transparent' : theme.bg2)};
   opacity: ${({ hasActiveTokens }) => (hasActiveTokens ? 1 : 0.4)};
   transition: 200ms;
@@ -403,6 +403,9 @@ export function ManageLists({
         </PaddedColumn>
       )}
       <Separator />
+      <div>
+        arestnoianrsetnioarst
+      </div>
       <ListContainer>
         <AutoColumn gap="md">
           {sortedLists.map((listUrl) => (

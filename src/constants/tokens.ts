@@ -3,6 +3,13 @@ import { Ether, Token, WETH9 } from '@uniswap/sdk-core'
 import { UNI_ADDRESS } from './addresses'
 import { SupportedChainId } from './chains'
 
+export const SEED = new Token(
+  SupportedChainId.BSCTESTNET,
+  '0xc92f2e6a6Ed317c91f1bD5F2832BE55293332c96',
+  18,
+  'SEED',
+  'SEED TOKEN'
+)
 export const AMPL = new Token(
   SupportedChainId.MAINNET,
   '0xD46bA6D942050d489DBd938a2C909A5d5039A161',
@@ -146,6 +153,14 @@ export const UNI: { [chainId: number]: Token } = {
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   ...WETH9,
+  // [SupportedChainId.BSC]: new Token()
+  [SupportedChainId.BSCTESTNET]: new Token(
+    SupportedChainId.BSCTESTNET,
+    '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
   [SupportedChainId.OPTIMISM]: new Token(
     SupportedChainId.OPTIMISM,
     '0x4200000000000000000000000000000000000006',

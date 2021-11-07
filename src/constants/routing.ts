@@ -13,6 +13,7 @@ import {
   FRAX,
   FXS,
   renBTC,
+  SEED,
   TRIBE,
   USDC,
   USDC_ARBITRUM,
@@ -83,6 +84,7 @@ export const COMMON_BASES: ChainCurrencyList = {
     WBTC,
     WETH9_EXTENDED[SupportedChainId.MAINNET],
   ],
+  [SupportedChainId.BSCTESTNET]: [SEED],
   [SupportedChainId.ROPSTEN]: [
     ExtendedEther.onChain(SupportedChainId.ROPSTEN),
     WETH9_EXTENDED[SupportedChainId.ROPSTEN],
